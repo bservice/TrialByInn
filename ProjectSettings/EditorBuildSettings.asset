@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Grid.unity
     guid: 9f6cc7de57fe7374aa37dafcd864c136
+  - enabled: 1
+    path: Assets/Scenes/LucasTests.unity
+    guid: 5f4693fd5c460074da98d503baa7c791
   m_configObjects: {}
