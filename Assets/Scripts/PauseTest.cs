@@ -5,7 +5,7 @@ using UnityEngine;
 public class PauseTest : MonoBehaviour
 {
     public GameObject pauseMenu;
-    public GameObject playButton;
+    public PausePlay playButton;
     public GameObject exitButton;
 
     private bool paused;
@@ -14,6 +14,9 @@ public class PauseTest : MonoBehaviour
     void Start()
     {
         paused = false;
+        pauseMenu = Instantiate(pauseMenu, new Vector3(100.0f, 100.0f), Quaternion.identity);
+        playButton = Instantiate(playButton, new Vector3(100.0f, 100.0f), Quaternion.identity);
+        exitButton = Instantiate(exitButton, new Vector3(100.0f, 100.0f), Quaternion.identity);
     }
 
     // Update is called once per frame
@@ -21,16 +24,23 @@ public class PauseTest : MonoBehaviour
     {
         if (paused)
         {
-            //playButton.GetComponent<BoxCollider2D>().On
+            if(playButton.Clicked)
+            {
+                pauseMenu.transform.position = new Vector3(100.0f, 100.0f);
+                playButton.transform.position = new Vector3(100.0f, 100.0f);
+                exitButton.transform.position = new Vector3(100.0f, 100.0f);
+                paused = false;
+                playButton.Clicked = false;
+            }
         }
         else
         {
             if (Input.GetKeyDown(KeyCode.P))
             {
                 paused = true;
-                Instantiate(pauseMenu, new Vector3(0.0f, 0.0f), Quaternion.identity);
-                Instantiate(playButton, new Vector3(-1.8f, -1.48f), Quaternion.identity);
-                Instantiate(exitButton, new Vector3(2.43f, -1.48f), Quaternion.identity);
+                pauseMenu.transform.position = new Vector3(0.0f, 0.0f);
+                playButton.transform.position = new Vector3(-1.8f, -1.48f);
+                exitButton.transform.position = new Vector3(2.43f, -1.48f);
             }
         }
     }
