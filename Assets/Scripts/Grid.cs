@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Holds all of the spaces on the grid.
+/// </summary>
 public class Grid : MonoBehaviour
 {
     #region Fields

@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Manages player input.
+/// </summary>
 public class ControlsManager : MonoBehaviour
 {
     #region Fields
@@ -18,7 +21,6 @@ public class ControlsManager : MonoBehaviour
     void Update()
     {
         // Player Controls
-        // Select object
 
         // Move object up
         if (Input.GetKey(KeyCode.W))

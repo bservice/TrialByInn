@@ -11,7 +11,6 @@ public class Square : MonoBehaviour
     private float size;
     // Whether or not the square has an object placed on it.
     private bool empty;
-    // Renderer (for changing color).
     #endregion
 
     #region Properties
