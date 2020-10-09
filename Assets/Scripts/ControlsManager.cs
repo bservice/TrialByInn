@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class ControlsManager : MonoBehaviour
 {
+    #region Fields
+
+    #endregion
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +17,28 @@ public class ControlsManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        // Player Controls
+        // Select object
+
+        // Move object up
+        if (Input.GetKey(KeyCode.W))
+        {
+
+        }
+        // Move object down
+        if (Input.GetKey(KeyCode.D))
+        {
+
+        }
+        // Move object left
+        if (Input.GetKey(KeyCode.A))
+        {
+
+        }
+        // Move object right
+        if (Input.GetKey(KeyCode.D))
+        {
+
+        }
     }
 }

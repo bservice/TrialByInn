@@ -11,6 +11,7 @@ public class Square : MonoBehaviour
     private float size;
     // Whether or not the square has an object placed on it.
     private bool empty;
+    // Renderer (for changing color).
     #endregion
 
     #region Properties
@@ -53,11 +54,25 @@ public class Square : MonoBehaviour
     {
         size = 1.0f;
         empty = true;
+        // Setting the squares to green by default.
+        this.GetComponent<SpriteRenderer>().material.SetColor("_Color", Color.green);
     }
 
     // Update is called once per frame
     void Update()
     {
         transform.position = position;
+    }
+
+    // What happens when the mouse hovers over a square.
+    private void OnMouseOver()
+    {
+        this.GetComponent<SpriteRenderer>().material.SetColor("_Color", Color.red);
+    }
+
+    // What happens when the mouse exits a square.
+    private void OnMouseExit()
+    {
+        this.GetComponent<SpriteRenderer>().material.SetColor("_Color", Color.green);
     }
 }
