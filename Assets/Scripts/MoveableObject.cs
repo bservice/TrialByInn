@@ -4,6 +4,7 @@ using UnityEngine;
 
 /// <summary>
 /// An object that the player can move.
+/// Could parent other classes (like a bard class or something).
 /// </summary>
 public class MoveableObject : MonoBehaviour
 {
